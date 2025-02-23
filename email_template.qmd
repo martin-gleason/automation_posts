@@ -1,0 +1,19 @@
+```{r}
+library(blastula)
+test <- compose_email(
+  body = md(
+    "
+Hello nerd,
+    
+## This is from Quarto
+    
+I am sending you an email from an R package called **blastula**.
+    
+Enjoy,<br>
+Marty
+    "
+  )
+)
+```
+
+![](pics/schatzi_approve.jpeg)
