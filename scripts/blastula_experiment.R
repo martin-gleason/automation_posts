@@ -38,14 +38,7 @@ Marty
   {btn}"
   )  
 )
-)
-test
-
-
-# credentials -------------------------------------------------------------
-
-private_email_creds <- creds_envvar(
-  user = Sys.getenv("INFO"),
+)imng
   pass_envvar = "PRIVATE_EMAIL_PASS",
   host = "mail.privateemail.com",
   port = 465,

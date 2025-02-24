@@ -17,3 +17,11 @@ Marty
 ```
 
 ![](pics/schatzi_approve.jpeg)
+
+![](pics/Hell_yeah.png)
+
+```{r}
+img <- here::here("pics", "Hell_yeah.png")
+"This is an other picture"
+print(img)
+```
