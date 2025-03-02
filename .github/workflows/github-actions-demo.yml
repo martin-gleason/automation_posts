@@ -7,12 +7,14 @@ jobs:
     steps:
       - run: echo "🔧 Hands on learning of github actions triggered by a ${{ github.event_name }} event."
       - run: echo "This job is now runing a ${{ runner.os }} server hosted by GitHub! ⏱️"
-      - run: echo "🔎 The name of your branch is ${{ github.repository }} and your repository is ${{ github.ref }}. 😭"️
+      - run: echo "🔎 The name of your branch is: ${{ github.repository }} and your repository is ${{ github.ref }}. 😭"️
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: echo "The ${{ github.repository }} repository has been cloned to the RUNNER!"
+      - run: echo " The ${{ github.repository }} repository has been cloned to the RUNNER!"
       - run: echo "The workflow is now ready to test your code on the runner 🏃"
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
       - run: echo "The job status is ${{ job.status }} 😍"
+      
+      
