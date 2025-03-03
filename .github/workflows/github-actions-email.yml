@@ -28,4 +28,4 @@ jobs:
 
       - name: Test Script
         uses: scripts
-        run: Rscript -e "source('test.R')"
+      - run: Rscript -e "source('test.R')"
