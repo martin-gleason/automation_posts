@@ -18,10 +18,6 @@ jobs:
             any::here
             any::glue
 
-      - name: Check Repo
-        uses: actions/checkout@v3
-        - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
-
         name: List files in the repository
         run: |
           ls ${{ github.workspace }}
