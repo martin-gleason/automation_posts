@@ -21,7 +21,7 @@ jobs:
             
       - name: Check Repo
         uses: actions/checkout@v4
-      - run: echo "The ${{ github.repository }} repository has been cloned to the RUNNER!"
+      - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
 
       - name: Test Script
         run: Rscript -e "source('scripts/test.R')"
