@@ -28,5 +28,4 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Test Script
-        working-directory: automation_posts
         run: Rscript -e "source('scripts/test.R')"
