@@ -22,20 +22,18 @@ jobs:
         uses: actions/checkout@v4
       - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
       
-      - name: Set Credentials
+      - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORS }}
         run: |
           Rscript -e "source('creds.R')"
+          Rscript -e "source('blastula_experiment.R')"
         
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
           Rscript -e "print('Aura')"
           Rscript -e "print(private_email_creds)"
-  
-      - name: Send Email
-        working-directory: ${{ github.workspace }}/scripts
-        run: Rscript -e "source('blastula_experiment.R')"
+
