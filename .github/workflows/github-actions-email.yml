@@ -33,7 +33,9 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-
-      - name: Test Script
+          Rscript -e "print('Aura')"
+          Rscript -e "print('private_email_creds')"
+  
+      - name: Send Email
         working-directory: ${{ github.workspace }}/scripts
         run: Rscript -e "source('blastula_experiment.R')"
