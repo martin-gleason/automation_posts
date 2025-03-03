@@ -25,7 +25,7 @@ test <- compose_email(
   "
 Hello friend,
     
-I am sending you an email from an R package called **blastula**.
+I am sending you an email from an R package called **blastula** and a github action.
     
 This is a version sent from an R script.
 
@@ -38,12 +38,7 @@ Marty
   {btn}"
   )  
 )
-)imng
-  pass_envvar = "PRIVATE_EMAIL_PASS",
-  host = "mail.privateemail.com",
-  port = 465,
-  use_ssl = TRUE
-  )
+)
 
 
 # sending email via smtp --------------------------------------------------
@@ -56,7 +51,7 @@ test %>%
   smtp_send(
     to = test_emails,
     from = Sys.getenv("INFO"),
-    subject ="Test Email, Approved by Schatzi" ,
+    subject ="2nd Test Email, Approved by Schatzi" ,
     credentials = private_email_creds
   )
 
