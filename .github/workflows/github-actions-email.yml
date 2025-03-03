@@ -34,7 +34,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
           Rscript -e "print('Aura')"
-          Rscript -e "print('private_email_creds')"
+          Rscript -e "print(private_email_creds)"
   
       - name: Send Email
         working-directory: ${{ github.workspace }}/scripts
