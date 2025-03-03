@@ -19,7 +19,7 @@ jobs:
             any::blastula
             any::here
             any::glue
-            
+
       - name: Check Repo
         uses: actions/checkout@v4
         - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
