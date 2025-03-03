@@ -23,6 +23,10 @@ jobs:
       - name: Check Repo
         uses: actions/checkout@v4
         - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
+        
+        name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
 
       - name: Test Script
         working-directory: automation_posts
