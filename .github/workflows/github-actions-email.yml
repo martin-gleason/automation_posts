@@ -28,7 +28,7 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORS }}
         run: |
-          source('creds.R')"
+          Rscript -e "source('creds.R')"
         
       - name: List files in the repository
         run: |
