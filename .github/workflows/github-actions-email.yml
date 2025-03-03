@@ -13,16 +13,8 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            any::tidyverse 
-            any::googlesheets4
+            any::tidyverse
+            any::blastula
+            any::here
+            any::glue
 
-      - name: Check Repo
-        uses: actions/checkout@v4
-        - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
-
-        name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-
-      - name: Test Script
-        run: Rscript -e "source('scripts/test.R')"
