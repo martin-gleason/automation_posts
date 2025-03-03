@@ -19,7 +19,7 @@ jobs:
             any::glue
 
       - name: Check Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
 
       - name: List files in the repository
@@ -27,5 +27,5 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Test Script
-        uses: .scripts
-      - run: Rscript -e "source('test.R')"
+        working-directory: ./scripts
+        run: Rscript -e "source('test.R')"
