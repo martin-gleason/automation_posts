@@ -1,5 +1,5 @@
 name: Blastula Blasting Email
-run-name: ${{ github.actor }} is sending an email from the organizers.science addres
+run-name: ${{ github.actor }} is sending an email from the organizers.science address
 on: [push]
 
 jobs:
