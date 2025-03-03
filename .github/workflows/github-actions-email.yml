@@ -17,7 +17,6 @@ jobs:
             any::tidyverse
             any::blastula
             any::here
-            any::glue
 
       - name: Check Repo
         uses: actions/checkout@v4
