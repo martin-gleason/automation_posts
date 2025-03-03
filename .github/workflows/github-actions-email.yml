@@ -27,4 +27,5 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Test Script
-        run: Rscript -e "source('scripts/test.R')"
+        uses: scripts
+        run: Rscript -e "source('test.R')"
