@@ -22,8 +22,8 @@ jobs:
             
       - name: Check Repo
         uses: actions/checkout@v4
-        - uses: .automation_posts
         - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
 
       - name: Test Script
+        working-directory: automation_posts
         run: Rscript -e "source('scripts/test.R')"
