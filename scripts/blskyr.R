@@ -48,17 +48,21 @@ bs_post(
   text = "This is a the second version of a test post from an R Script."
   )
 
+# 
+# bs_post(
+#   text = "This is the third version of a test post from an R Script.
+# via @bskyr.bsky.social (https://christophertkenny.com/bskyr/)",
+#   user = "organizers.science"
+# )
+# 
+# #image must be under 1 meg
+# bs_post(
+#   text = "This is the fourth version of a test post from an R Script.
+# via @bskyr.bsky.social (https://christophertkenny.com/bskyr/)",
+#   images = img,
+#   images_alt = "Kite man from DC Comics saying hell yeah"
+#   )
 
 bs_post(
-  text = "This is the third version of a test post from an R Script.
-via @bskyr.bsky.social (https://christophertkenny.com/bskyr/)",
-  user = "organizers.science"
+  text = "Yet another post on bluesky, this time from github actions."
 )
-
-#image must be under 1 meg
-bs_post(
-  text = "This is the fourth version of a test post from an R Script.
-via @bskyr.bsky.social (https://christophertkenny.com/bskyr/)",
-  images = img,
-  images_alt = "Kite man from DC Comics saying hell yeah"
-  )

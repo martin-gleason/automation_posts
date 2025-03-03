@@ -41,9 +41,16 @@ Marty
 )
 
 
+# CREDENTIALS -------------------------------------------------------------
+
+
+#see creds.R
+
+
 # sending email via smtp --------------------------------------------------
 
 test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com", 
+                 "Eric Mikklesen" = "iksum@gmail.com",
                  "Kylah Seltzer Johnston" = "kylahrsj@gmail.com",
                  "Shannon Erin Glass" = "Shannonerin@gmail.com")
 

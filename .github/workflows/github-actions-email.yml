@@ -21,7 +21,15 @@ jobs:
       - name: Check Repo
         uses: actions/checkout@v4
       - run: echo "The ${{ github.repository }} repository has been cloned!⏱️"
-
+      
+      - name: Set Credentials
+        working-directory: ${{ github.workspace }}/scripts
+        env:
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORS }}
+        run: |
+          Rscript -e "source('creds.R')"
+        
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
