@@ -28,4 +28,4 @@ jobs:
 
       - name: Test Script
         working-directory: ${{ github.workspace }}/scripts
-        run: Rscript -e "source('blasutla_experiment.R')"
+        run: Rscript -e "source('blastula_experiment.R')"
