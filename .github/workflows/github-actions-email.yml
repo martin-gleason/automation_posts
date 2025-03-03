@@ -28,12 +28,5 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORS }}
         run: |
-          Rscript -e "source('creds.R')"
           Rscript -e "source('blastula_experiment.R')"
-        
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-          Rscript -e "print('Aura')"
-          Rscript -e "print(private_email_creds)"
 
