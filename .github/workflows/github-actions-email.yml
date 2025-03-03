@@ -28,7 +28,6 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORS }}
         run: |
-          Rscript -e "Sys.setenv(INFO = EMAIL, PASSSWORD = PASSWORD)"
           source('creds.R')"
         
       - name: List files in the repository
