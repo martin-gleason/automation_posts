@@ -25,7 +25,7 @@ jobs:
         working-directory: ${{ github.workspace }}/scripts
         env:
           EMAIL: ${{ secrets.EMAIL }}
-          PASSWORD: ${{ secrets.PASSWORS }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           Rscript -e "Sys.setenv(EMAIL = 'EMAIL', PASSWORD = 'PASSWORD')"
           Rscript -e "source('blastula_experiment.R')"
