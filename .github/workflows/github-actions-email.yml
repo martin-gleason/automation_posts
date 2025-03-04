@@ -28,5 +28,5 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           Rscript -e 'email_password = Sys.getenv("PASSWORD") \
-                  -e '"source('blastula_experiment.R')" \
+                  -e "source('blastula_experiment.R')" \
                   -e print("this line ran.")'
