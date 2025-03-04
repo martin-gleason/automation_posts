@@ -47,7 +47,7 @@ Marty
 
 private_email_creds <- blastula::creds_envvar(
   user = Sys.getenv("EMAIL"),
-  pass_envvar = "email_password",
+  pass_envvar = "PASSWORD",
   host = "mail.privateemail.com",
   port = 465,
   use_ssl = TRUE
@@ -57,10 +57,7 @@ print(private_email_creds)
 
 # sending email via smtp --------------------------------------------------
 
-test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com", 
-                 "Eric Mikklesen" = "iksum@gmail.com",
-                 "Kylah Seltzer Johnston" = "kylahrsj@gmail.com",
-                 "Shannon Erin Glass" = "Shannonerin@gmail.com")
+test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com")
 
 test %>%
   smtp_send(
