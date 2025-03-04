@@ -27,6 +27,5 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          Rscript -e "Sys.setenv(EMAIL = 'EMAIL', PASSWORD = 'PASSWORD')"
           Rscript -e "source('blastula_experiment.R')"
 
