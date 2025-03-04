@@ -53,7 +53,7 @@ private_email_creds <- blastula::creds_envvar(
   use_ssl = TRUE
 )
 
-
+print(private_email_creds)
 
 # sending email via smtp --------------------------------------------------
 
