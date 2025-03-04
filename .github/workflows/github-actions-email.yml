@@ -27,5 +27,5 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORS }}
         run: |
-          Rscript -e "source('blastula_experiment.R')"
+          source('blastula_experiment.R')"
 
