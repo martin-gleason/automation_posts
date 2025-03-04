@@ -5,6 +5,8 @@
 #note on system.file(): this function pulls from a package. Since Schatzi is
 #in a different directory, I can use here()
 
+# help from https://www.youtube.com/watch?v=_QQGW_RUw_I !!
+
 # packages ----------------------------------------------------------------
 
 library(blastula)
@@ -44,8 +46,8 @@ Marty
 # CREDENTIALS -------------------------------------------------------------
 
 private_email_creds <- blastula::creds_envvar(
-  user = "EMAIL",
-  pass_envvar = Sys.getenv("PASSWORD"),
+  user = Sys.getenv("EMAIL"),
+  pass_envvar = "PASSWORD",
   host = "mail.privateemail.com",
   port = 465,
   use_ssl = TRUE
