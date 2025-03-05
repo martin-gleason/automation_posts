@@ -48,8 +48,7 @@ Marty
 EMAIL <- Sys.getenv("EMAIL")
 PASSWORD <- Sys.getenv("PASSWORD")
 
-
-private_email_creds <- blastula::creds_envvar(
+private_email_creds <- creds_envvar(
   user = EMAIL,
   pass_envvar = "PASSWORD",
   host = "mail.privateemail.com",
@@ -70,8 +69,6 @@ test %>%
     subject ="2nd Test Email, Approved by Schatzi" ,
     credentials = private_email_creds
   )
-
-
 
 # Next steps --------------------------------------------------------------
 
