@@ -23,10 +23,10 @@ jobs:
       
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
-        run: |
-          source('blastula_experiment.R')
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          source('blastula_experiment.R')
         shell: Rscript {0}
 
