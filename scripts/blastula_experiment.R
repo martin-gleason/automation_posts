@@ -45,8 +45,12 @@ Marty
 
 # CREDENTIALS -------------------------------------------------------------
 
+EMAIL <- Sys.getenv("EMAIL")
+PASSWORD <- Sys.getenv("PASSWORD")
+
+
 private_email_creds <- blastula::creds_envvar(
-  user = Sys.getenv("EMAIL"),
+  user = EMAIL,
   pass_envvar = "PASSWORD",
   host = "mail.privateemail.com",
   port = 465,
