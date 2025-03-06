@@ -28,7 +28,6 @@ jobs:
         run: |
           echo EMAIL="$EMAIL" >> .Renviron
           echo PASS="$PASSWORD " >> .Renviron
-          echo "Password is ${{ PASS }}"
           echo "Password is ${{ PASSWORD }}"
           echo "Email is ${{ EMAIL }}"
         shell: bash
