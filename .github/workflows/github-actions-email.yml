@@ -29,11 +29,8 @@ jobs:
         run: |
           echo EMAIL="$EMAIL" >> ~/.Renviron
           echo PASS="$PASSWORD " >> ~/.Renviron
-        shell: bash
-        
-        name: List files in the repository
-        run: |
           ls ${{ github.workspace }}
+        shell: bash
       
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
