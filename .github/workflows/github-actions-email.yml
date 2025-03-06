@@ -26,9 +26,6 @@ jobs:
         
       - name: Set Environment
         working-directory: ${{ github.workspace }}/scripts
-        env:
-          EMAIL: ${{ secrets.EMAIL }}
-          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           echo EMAIL="$EMAIL" >> ~/.Renviron
           echo PASS="$PASSWORD " >> ~/.Renviron
@@ -36,6 +33,9 @@ jobs:
       
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
+        env:
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           Rscript test.R
 
