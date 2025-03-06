@@ -6,6 +6,7 @@ on: [push]
 jobs:
   import-data:
     runs-on: ubuntu-latest
+    secrets: inherit
     environment: production
     
     steps:
