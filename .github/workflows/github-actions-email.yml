@@ -7,6 +7,9 @@ jobs:
   Send-Email:
     runs-on: ubuntu-latest
     environment: production
+    env:
+      EMAIL: ${{ secrets.EMAIL }}
+      PASSWORD: ${{ secrets.PASSWORD }}
     
     steps:
       - name: Set up R
@@ -34,9 +37,6 @@ jobs:
       
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
-        env:
-          EMAIL: ${{ secrets.EMAIL }}
-          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           Rscript test.R
 
