@@ -4,8 +4,8 @@ on: [push]
 
 
 jobs:
-  EmailSetup:
-  runs-on: ubuntu-latest
+  Send-Email:
+    runs-on: ubuntu-latest
     environment: production
     
     steps:
@@ -34,7 +34,7 @@ jobs:
         name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-
+      
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
         env:
