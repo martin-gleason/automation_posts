@@ -6,7 +6,6 @@ on: [push]
 jobs:
   import-data:
     runs-on: ubuntu-latest
-    secrets: inherit
     environment: production
     
     steps:
@@ -24,12 +23,19 @@ jobs:
 
       - name: Check Repo
         uses: actions/checkout@v4
-      
-      - name: Set Credentials and Email
+        
+      - name: Set Environment
         working-directory: ${{ github.workspace }}/scripts
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          echo EMAIL="$EMAIL" >> ~/.Renviron
+          echo PASS="$PASSWORD " >> ~/.Renviron
+        shell: bash
+      
+      - name: Set Credentials and Email
+        working-directory: ${{ github.workspace }}/scripts
         run: |
           Rscript test.R
 
