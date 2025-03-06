@@ -29,7 +29,7 @@ jobs:
         run: |
           echo EMAIL="$EMAIL" >> ~/.Renviron
           echo PASS="$PASSWORD " >> ~/.Renviron
-          ls ${{ github.workspace }}
+          ls -al ${{ github.workspace }}
         shell: bash
       
       - name: Set Credentials and Email
