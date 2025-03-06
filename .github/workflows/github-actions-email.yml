@@ -7,10 +7,6 @@ jobs:
   Send-Email:
     runs-on: ubuntu-latest
     environment: production
-    env:
-      EMAIL: ${{ secrets.EMAIL }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-    
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
