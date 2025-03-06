@@ -23,6 +23,7 @@ jobs:
       
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
+        secrets: inherit
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
