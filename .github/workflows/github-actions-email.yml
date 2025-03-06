@@ -30,7 +30,7 @@ jobs:
         working-directory: ${{ github.workspace }}
         run: |
           echo EMAIL="$EMAIL" >> .Renviron
-          echo PASS="$PASSWORD " >> .Renviron
+          echo PASSWORD="$PASSWORD " >> .Renviron
           echo "Password is ${{ PASSWORD }}"
           echo "Email is ${{ EMAIL }}"
         shell: bash
