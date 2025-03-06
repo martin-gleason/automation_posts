@@ -1,11 +1,13 @@
 name: Blastula Blasting Email
 run-name: ${{ github.actor }} is sending an email from the organizers.science address
 on: [push]
-  secrets: inherit
+
 
 jobs:
   import-data:
     runs-on: ubuntu-latest
+    environment: production
+    
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
