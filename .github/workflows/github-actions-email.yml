@@ -28,11 +28,12 @@ jobs:
         run: |
           echo EMAIL="$EMAIL" >> .Renviron
           echo PASS="$PASSWORD " >> .Renviron
-          Rscript -e "source('renv/activate.R')"
+          echo "Password is ${{ PASS }}"
+          echo "Password is ${{ PASSWORD }}"
+          echo "Email is ${{ EMAIL }}"
         shell: bash
       
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
         run: |
-          Rscript test.R
 
