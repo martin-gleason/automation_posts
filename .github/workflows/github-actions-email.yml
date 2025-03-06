@@ -9,7 +9,7 @@ jobs:
     environment: production
     env:
       PASSWORD: ${{ secrets.PASSWORD }}
-      EMAIL: ${{ secrets.email }}
+      EMAIL: ${{ secrets.EMAIL }}
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
