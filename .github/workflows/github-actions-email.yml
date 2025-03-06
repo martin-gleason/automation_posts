@@ -27,8 +27,8 @@ jobs:
       - name: Set Environment
         working-directory: ${{ github.workspace }}
         run: |
-          echo EMAIL="$EMAIL" >> ~/.Renviron
-          echo PASS="$PASSWORD " >> ~/.Renviron
+          echo EMAIL="$EMAIL" >> .Renviron
+          echo PASS="$PASSWORD " >> .Renviron
           ls -al ${{ github.workspace }}
         shell: bash
       
