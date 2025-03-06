@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      'PASSWORD: ${{ secrets.PASSWORD }}'
-      'EMAIL: ${{ secrets.EMAIL }}'
+      PASSWORD: ${{ secrets.PASSWORD }}
+      EMAIL: ${{ secrets.EMAIL }}
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
@@ -29,8 +29,8 @@ jobs:
       - name: Set Environment
         working-directory: ${{ github.workspace }}
         run: |
-          echo "Password is ${{ PASSWORD }}"
-          echo "Email is ${{ EMAIL }}"
+          echo ${{ PASSWORD }}
+          echo ${{ EMAIL }}
         shell: bash
       
       - name: Set Credentials and Email
