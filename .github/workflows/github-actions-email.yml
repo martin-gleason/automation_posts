@@ -1,6 +1,7 @@
 name: Blastula Blasting Email
 run-name: ${{ github.actor }} is sending an email from the organizers.science address
 on: [push]
+  secrets: inherit
 
 jobs:
   import-data:
@@ -23,7 +24,6 @@ jobs:
       
       - name: Set Credentials and Email
         working-directory: ${{ github.workspace }}/scripts
-        secrets: inherit
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
