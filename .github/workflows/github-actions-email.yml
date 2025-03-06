@@ -29,8 +29,8 @@ jobs:
       - name: Set Environment
         working-directory: ${{ github.workspace }}
         run: |
-          echo ${{ PASSWORD }}
-          echo ${{ EMAIL }}
+          echo $PASSWORD
+          echo $EMAIL
         shell: bash
       
       - name: Set Credentials and Email
