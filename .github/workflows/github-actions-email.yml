@@ -26,14 +26,16 @@ jobs:
       - name: Check Repo
         uses: actions/checkout@v4
         
-      - name: Set Environment
+      - name: Set Environment and Credentials
         working-directory: ${{ github.workspace }}
         run: |
-          echo $PASSWORD
-          echo $EMAIL
+          echo PASSWORD="$PASSWORD" >> .Renviron
+          echo EMAIL="$EMAIL" >> .Renviron
         shell: bash
       
-      - name: Set Credentials and Email
+      - name: Send Email
         working-directory: ${{ github.workspace }}/scripts
         run: |
+          blastula_experiment.R
+        shell: bash
 
