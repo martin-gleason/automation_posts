@@ -36,6 +36,6 @@ jobs:
       - name: Send Email
         working-directory: ${{ github.workspace }}/scripts
         run: |
-          blastula_experiment.R
+          Rscript blastula_experiment.R
         shell: bash
 
