@@ -52,7 +52,7 @@ private_email_creds <- creds_envvar(
   user = EMAIL,
   pass_envvar = "PASSWORD",
   host = "mail.privateemail.com",
-  port = 465,
+  port = 587,
   use_ssl = TRUE
 )
 
