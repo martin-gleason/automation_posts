@@ -61,13 +61,7 @@ print(private_email_creds)
 
 # sending email via smtp --------------------------------------------------
 
-test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com",
-                 "Kylah Johnston" = "kylahrsj@gmail.com",
-                 "Tony Sucks" = "antonpgleason@gmail.com",
-                 "Pat Sier" = "pjsier@gmail.com",
-                 "Eric Mikkelsen" = "irksum@gmail.com",
-                 "Anthony Avina" = "aavina2@gmail.com"
-                 )
+test_emails <- c("Shannon Glass" = "shannonerin@gmail.com")
 
 test %>%
   smtp_send(
