@@ -58,6 +58,8 @@ private_email_creds <- creds_envvar(
 
 print(private_email_creds)
 
+print(private_email_creds)
+
 # sending email via smtp --------------------------------------------------
 
 test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com")
