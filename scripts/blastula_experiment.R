@@ -67,6 +67,7 @@ test %>%
     to = test_emails,
     from = "info@organizers.science",
     subject ="2nd Test Email, Approved by Schatzi" ,
+    verbose = TRUE,
     credentials = private_email_creds
   )
 
