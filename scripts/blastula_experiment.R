@@ -67,7 +67,7 @@ test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com")
 test %>%
   smtp_send(
     to = test_emails,
-    from = Sys.getenv("INFO"),
+    from = Sys.getenv("EMAIL"),
     subject ="2nd Test Email, Approved by Schatzi" ,
     credentials = private_email_creds
   )
