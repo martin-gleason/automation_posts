@@ -14,8 +14,10 @@ library(here)
 library(glue)
 
 image_path <- here("pics", "schatzi_approve.jpeg")
+fivel_path <- here("pics", "fivel.jpg")
 
 pic <- add_image(file = image_path)
+kitten <- add_image(file = fivel_path)
 
 btn <- add_cta_button(
   url = "https://organizers.science",
@@ -27,13 +29,12 @@ test <- compose_email(
   "
 Hello friend,
     
-I am sending you an email from an R package called **blastula** and a github action.
+I am sending you an email from an R package called **blastula** and a github action. It's taken a while. But, it's finally happend!🤩
     
-This is a version sent from an R script.
 
-This email is approved by Schatzi.
+This email is approved by Schatzi and Fivel.
 
-{pic}
+{pic} {kitten}
     
 Enjoy,<br>
 Marty
@@ -60,7 +61,13 @@ print(private_email_creds)
 
 # sending email via smtp --------------------------------------------------
 
-test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com")
+test_emails <- c("Marty Gleason" = "martin.gleason.ms@gmail.com",
+                 "Kylah Johnston" = "kylahrsj@gmail.com",
+                 "Tony Sucks" = "antonpgleason@gmail.com",
+                 "Pat Sier" = "pjsier@gmail.com",
+                 "Eric Mikkelsen" = "irksum@gmail.com",
+                 "Anthony Avina" = "aavina2@gmail.com"
+                 )
 
 test %>%
   smtp_send(
